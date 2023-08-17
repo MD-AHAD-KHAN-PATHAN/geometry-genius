@@ -18,8 +18,60 @@
     </header>
 
     <main>
-        <div>
-            <div>
+        <div class="flex">
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- card - 1 -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="/images/triangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-2xl">Triangle</h2>
+                        <p>Area (A) = 0.5 X B X H</p>
+                        <p>
+                            <input type="number" class="border w-24 px-2 bg-gray-200" placeholder="B">
+                            <span class="mx-3">cm</span>
+                            <input type="number" class="border w-24 px-2 bg-gray-200" placeholder="H">
+                            <span class="ml-3">cm</span>
+                        </p>
+                        <p>Area : <span></span></p>
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card - 2 -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="/images/rectangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-2xl">Rectangle</h2>
+                        <p>Area (A) = W X I</p>
+                        <p>
+                            <input type="number" class="border w-24 px-2 bg-gray-200" placeholder="W">
+                            <span class="mx-3">cm</span>
+                            <input type="number" class="border w-24 px-2 bg-gray-200" placeholder="I">
+                            <span class="ml-3">cm</span>
+                        </p>
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card - 3 -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="/images/parallelogram.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-2xl">Parallelogram</h2>
+                        <p>Area (A) = B X H</p>
+                        <p>
+                            <input type="number" class="border w-24 px-2 bg-gray-200" placeholder="B">
+                            <span class="mx-3">cm</span>
+                            <input type="number" class="border w-24 px-2 bg-gray-200" placeholder="H">
+                            <span class="ml-3">cm</span>
+                        </p>
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
 
             </div>
             <div>
