@@ -1,43 +1,84 @@
 
-function triangleAreaCalculator(base, heignt) {
-
-    document.getElementById('area1').innerText = 0.5 * base * heignt;
+function inputValue(inputId){
+    const number = document.getElementById(inputId);
+    return number.value;
 }
 
-function areaCalculatorRectangle(base, heignt) {
-    document.getElementById('area2').innerText = base * heignt;
-}
-
-function areaCalculatorParallelogram(base, heignt) {
-    document.getElementById('area3').innerText = base * heignt;
+function areaInnerTextSet(elementId, area){
+    document.getElementById(elementId).innerText = area;
 }
 
 
-function clickbtn1(element) {
+function clickbtn1() {
 
-    const triangleBase = element.parentNode.parentNode.childNodes[5].childNodes[1].value;
-    const triangleHeight = element.parentNode.parentNode.childNodes[5].childNodes[5].value;
+    const base = inputValue('triangleBase');
 
-    triangleAreaCalculator(triangleBase, triangleHeight);
+    const height = inputValue('triangleHeight');
+
+    let area = 0.5 * base * height;
+
+    areaInnerTextSet('triangleArea', area);
+
+}
+
+function clickbtn2() {
+
+    const width = inputValue('rectangleBase');
+    
+    const length = inputValue('rectangleHeight');
+
+    let area = width * length;
+
+    areaInnerTextSet('rectangleArea', area);
 
 
 }
 
-function clickbtn2(element) {
+function clickbtn3() {
 
-    const rectangleBase = element.parentNode.parentNode.childNodes[5].childNodes[1].value;
-    const rectangleHeight = element.parentNode.parentNode.childNodes[5].childNodes[5].value;
+    const base = inputValue('parallelogramBase');
 
-    areaCalculatorRectangle(rectangleBase, rectangleHeight);
+    const height = inputValue('parallelogramHeight')
+
+    let area = base * height;
+
+    areaInnerTextSet('parallelogramArea', area);
 
 }
 
-function clickbtn3(element) {
+function clickbtn4() {
 
-    const parallelogramBase = element.parentNode.parentNode.childNodes[5].childNodes[1].value;
-    const parallelogramHeight = element.parentNode.parentNode.childNodes[5].childNodes[5].value;
+    const base = inputValue('rhombusBase');
 
-    areaCalculatorParallelogram(parallelogramBase, parallelogramHeight);
+    const height = inputValue('rhombusHeight')
+
+    let area = 0.5 * base * height;
+
+    areaInnerTextSet('rhombusArea', area);
+
+}
+
+function clickbtn5() {
+
+    const base = inputValue('pentagonBase');
+
+    const height = inputValue('pentagonHeight')
+
+    let area = 0.5 * base * height;
+
+    areaInnerTextSet('pentagonArea', area);
+
+}
+
+function clickbtn6() {
+
+    const base = inputValue('ellipseBase');
+
+    const height = inputValue('ellipseHeight')
+
+    let area = 3.14 * base * height;
+
+    areaInnerTextSet('ellipseArea', area);
 
 }
 
