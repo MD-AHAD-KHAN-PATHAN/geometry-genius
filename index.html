@@ -27,14 +27,14 @@
                         <h2 class="card-title text-2xl">Triangle</h2>
                         <p>Area (A) = 0.5 X B X H</p>
                         <p>
-                            <input type="number" class="border w-24 px-2 bg-gray-200" placeholder="B">
+                            <input id="triangle-b" type="number" class="border w-24 px-2 bg-gray-200" placeholder="B">
                             <span class="mx-3">cm</span>
-                            <input type="number" class="border w-24 px-2 bg-gray-200" placeholder="H">
+                            <input id="triangle-h" type="number" class="border w-24 px-2 bg-gray-200" placeholder="H">
                             <span class="ml-3">cm</span>
                         </p>
-                        <p>Area : <span></span></p>
+                        <p>Area : <span id="area1"></span></p>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Calculate</button>
+                            <button class="btn btn-primary" onclick="clickbtn1(this)">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -45,13 +45,16 @@
                         <h2 class="card-title text-2xl">Rectangle</h2>
                         <p>Area (A) = W X I</p>
                         <p>
-                            <input type="number" class="border w-24 px-2 bg-gray-200" placeholder="W">
+                            <input id="rectangleBaseId" type="number" class="border w-24 px-2 bg-gray-200"
+                                placeholder="W">
                             <span class="mx-3">cm</span>
-                            <input type="number" class="border w-24 px-2 bg-gray-200" placeholder="I">
+                            <input id="rectangleHeightId" type="number" class="border w-24 px-2 bg-gray-200"
+                                placeholder="I">
                             <span class="ml-3">cm</span>
                         </p>
+                        <p>Area : <span id="area2"></span></p>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Calculate</button>
+                            <button class="btn btn-primary" onclick="clickbtn2(this)">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -62,13 +65,16 @@
                         <h2 class="card-title text-2xl">Parallelogram</h2>
                         <p>Area (A) = B X H</p>
                         <p>
-                            <input type="number" class="border w-24 px-2 bg-gray-200" placeholder="B">
+                            <input id="parallelogramBaseId" type="number" class="border w-24 px-2 bg-gray-200"
+                                placeholder="B">
                             <span class="mx-3">cm</span>
-                            <input type="number" class="border w-24 px-2 bg-gray-200" placeholder="H">
+                            <input id="parallelogramHeightId" type="number" class="border w-24 px-2 bg-gray-200"
+                                placeholder="H">
                             <span class="ml-3">cm</span>
                         </p>
+                        <p>Area : <span id="area3"></span></p>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Calculate</button>
+                            <button class="btn btn-primary" onclick="clickbtn3(this)">Calculate</button>
                         </div>
                     </div>
                 </div>
