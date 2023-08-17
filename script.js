@@ -1,13 +1,22 @@
 
-function inputValue(inputId){
+function inputValue(inputId) {
     const number = document.getElementById(inputId);
     return number.value;
 }
 
-function areaInnerTextSet(elementId, area){
+function areaInnerTextSet(elementId, area) {
     document.getElementById(elementId).innerText = area;
 }
 
+function addToCalculation(shapeName, shapeValue) {
+
+    const li = document.createElement('li');
+
+    li.innerText = document.getElementById(shapeName).innerText + ' : ' + document.getElementById(shapeValue).innerText;
+
+    document.getElementById('final-output').appendChild(li);
+
+}
 
 function clickbtn1() {
 
@@ -17,19 +26,23 @@ function clickbtn1() {
 
     let area = 0.5 * base * height;
 
-    areaInnerTextSet('triangleArea', area);
+    areaInnerTextSet('triangleArea', area.toFixed(2));
+
+    addToCalculation('triangleName', 'triangleValue');
 
 }
 
 function clickbtn2() {
 
     const width = inputValue('rectangleBase');
-    
+
     const length = inputValue('rectangleHeight');
 
     let area = width * length;
 
-    areaInnerTextSet('rectangleArea', area);
+    areaInnerTextSet('rectangleArea', area.toFixed(2));
+
+    addToCalculation('rectangleName', 'rectangleValue');
 
 
 }
@@ -42,7 +55,9 @@ function clickbtn3() {
 
     let area = base * height;
 
-    areaInnerTextSet('parallelogramArea', area);
+    areaInnerTextSet('parallelogramArea', area.toFixed(2));
+
+    addToCalculation('parallelogramName', 'parallelogramValue');
 
 }
 
@@ -54,7 +69,9 @@ function clickbtn4() {
 
     let area = 0.5 * base * height;
 
-    areaInnerTextSet('rhombusArea', area);
+    areaInnerTextSet('rhombusArea', area.toFixed(2));
+
+    addToCalculation('rhombusName', 'rhombusValue');
 
 }
 
@@ -66,7 +83,9 @@ function clickbtn5() {
 
     let area = 0.5 * base * height;
 
-    areaInnerTextSet('pentagonArea', area);
+    areaInnerTextSet('pentagonArea', area.toFixed(2));
+
+    addToCalculation('pentagonName', 'pentagonValue');
 
 }
 
@@ -78,7 +97,9 @@ function clickbtn6() {
 
     let area = 3.14 * base * height;
 
-    areaInnerTextSet('ellipseArea', area);
+    areaInnerTextSet('ellipseArea', area.toFixed(2));
+
+    addToCalculation('ellipseName', 'ellipseValue');
 
 }
 
